@@ -232,7 +232,7 @@ mapped to the appropriate device code (in this case 12). The chosen device code
 and all other ones defined are passed to the C++ compiler in the following step:</p>
 <div class="codehilite"><pre><span></span><code><span class="nb">target_compile_definitions</span><span class="p">(</span>
 <span class="w">  </span><span class="o">${</span><span class="nv">LIB_NAME</span><span class="o">}</span>
-<span class="w">  </span><span class="s">PRIVATE</span><span class="w"> </span><span class="o">${</span><span class="nv">COMPILE_DEFS</span><span class="o">}</span><span class="w"> </span><span class="s">GPU_DEVICE=</span><span class="o">${</span><span class="nv">GPU_DEVICE_CODE</span><span class="o">}</span>
+<span class="w">  </span><span class="s">PRIVATE</span><span class="w"> </span><span class="s">GPU_DEVICE=</span><span class="o">${</span><span class="nv">GPU_DEVICE_CODE</span><span class="o">}</span>
 <span class="w">          </span><span class="s">GPU_DEVICE_NONE=</span><span class="o">${</span><span class="nv">GPU_DEVICE_NONE</span><span class="o">}</span><span class="w"> </span><span class="s">GPU_DEVICE_CUDA=</span><span class="o">${</span><span class="nv">GPU_DEVICE_CUDA</span><span class="o">}</span>
 <span class="w">          </span><span class="s">GPU_DEVICE_XPU=</span><span class="o">${</span><span class="nv">GPU_DEVICE_XPU</span><span class="o">}</span><span class="w"> </span><span class="s">GPU_DEVICE_MPS=</span><span class="o">${</span><span class="nv">GPU_DEVICE_MPS</span><span class="o">}</span><span class="p">)</span>
 </code></pre></div>
@@ -268,7 +268,7 @@ conforms to quality and legibility. These tools are a mixture of formatters and 
 <li>C: <a href="https://clang.llvm.org/docs/ClangFormat.html">clang-format</a> and <a href="https://clang.llvm.org/extra/clang-tidy/">clang-tidy</a></li>
 <li>Python: <a href="https://docs.astral.sh/ruff/">ruff</a></li>
 <li>Shell: <a href="https://github.com/koalaman/shellcheck">ShellCheck</a></li>
-<li>CMake: <a href="https://github.com/cheshirekow/cmake_format">cmake-format</a></li>
+<li>CMake: cmake-lint from <a href="https://github.com/cheshirekow/cmake_format">cmake-format</a> (Note: We do not use cmake-format's formatter)</li>
 <li>GitHub Actions workflows: <a href="https://woodruffw.github.io/zizmor">zizmor</a></li>
 </ul>
 <p>Instructions on installing these tools can be found in their respective documentations.</p>
